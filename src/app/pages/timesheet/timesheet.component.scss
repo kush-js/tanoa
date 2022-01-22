@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+
+th {
+    width: 7rem;
+}
+
+tr {
+    display: flex;
+    justify-content: space-around;
+}
+
+tr input {
+    width: 7rem;
+}
