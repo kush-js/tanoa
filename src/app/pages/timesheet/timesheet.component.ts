@@ -24,8 +24,6 @@ export class TimesheetComponent implements OnInit {
     }
   }
 
-  formatDate(d: any) {
-    return 
-  }
+  
 
 }

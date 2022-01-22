@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MENU_ITEMS } from './menuitems';
 
 @Component({
@@ -7,7 +8,13 @@ import { MENU_ITEMS } from './menuitems';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(public router: Router) { }
+
   menu = MENU_ITEMS;
   title = 'tanoa';
+  menuScreens = [
+    '/timesheet',
+  ]
   
 }

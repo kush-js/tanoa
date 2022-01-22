@@ -1,20 +1,20 @@
 
 
 <nb-layout>
-    <nb-layout-header>
-        <button nbButton outline><nb-icon icon="menu-outline"></nb-icon></button>
-        <img src="../assets/hourglass.png" style="height: 150%;padding-left: 25px;">
+    <nb-layout-header *ngIf="menuScreens.indexOf(router.url) >= 0">
+         <img src="../assets/hourglass.png" style="height: 100%;">
       
         <span style="text-align: right; display: inline-block; width: 100%;">
             <!--Insert Top menu items here-->
+            
         </span>
     </nb-layout-header>
 
-    <nb-sidebar>
+    <nb-sidebar *ngIf="menuScreens.indexOf(router.url) >= 0">
         <nb-menu [items]="menu">Menu</nb-menu>
     </nb-sidebar>
     
-    <nb-layout-column>
+    <nb-layout-column fixed>
         <router-outlet></router-outlet>
     </nb-layout-column>
     
