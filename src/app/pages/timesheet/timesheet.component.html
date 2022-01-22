@@ -1,14 +1,11 @@
-<nb-layout>
 
- 
-
-<nb-layout-header>
-    <img src="../../../assets/hourglass.png" style="height: 150%;">
-    
-    <span style="text-align: right; display: inline-block; width: 100%;">
-        <!--Insert Top menu items here-->
-    </span>
-</nb-layout-header>
-    
-
-</nb-layout>
+<nb-card>
+    <nb-card-body>
+        <table>
+            <tr>
+                <th>Project</th>
+                <th *ngFor="let d of dates">{{ d.toDateString().split(' ').splice(0,3).join(' ') }}</th>
+            </tr>
+        </table>
+    </nb-card-body>
+</nb-card>

@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbIconModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbIconModule, NbMenuModule, NbMenuService } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbCardModule } from '@nebular/theme';
 import { NbButtonModule } from '@nebular/theme';
 import { NbSidebarModule } from '@nebular/theme';
 import { NbSidebarService } from '@nebular/theme';
 import { TimesheetComponent } from './pages/timesheet/timesheet.component';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 
 
@@ -34,10 +35,12 @@ import { TimesheetComponent } from './pages/timesheet/timesheet.component';
     NbButtonModule,
     NbSidebarModule,
     NbEvaIconsModule,
-    NbIconModule
+    NbIconModule,
+    NbMenuModule.forRoot(),
+    Ng2SmartTableModule,
    
   ],
-  providers: [NbSidebarService],
+  providers: [NbSidebarService, NbMenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
